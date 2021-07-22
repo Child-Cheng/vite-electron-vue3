@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    // 目标文件所在路径
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "lib": ["esnext", "dom","ES6"],
+    "paths": {
+      "@render/*": ["src/render/*"],
+      "@main/*": ["src/main/*"],
+      "@src/*": ["src/*"],
+      "@root/*": ["./*"]
+    },
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "script/*.ts"]
+}

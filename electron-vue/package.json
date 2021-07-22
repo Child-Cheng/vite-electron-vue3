@@ -1,0 +1,43 @@
+{
+  "name": "electron-vue",
+  "version": "0.0.0",
+  "main": "dist/main/app.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently -n=vue,ele -c=green,blue \"npm run dev:vue\" \"npm run dev:ele\"",
+    "dev:vue": "vite",
+    "dev:ele": "node -r ts-node/register script/build-main --env=development --watch",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "concurrently": "^6.2.0",
+    "dotenv": "^10.0.0",
+    "fs-extra": "^8.1.0",
+    "ora": "^5.4.1",
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.4",
+    "@rollup/plugin-commonjs": "^19.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.2",
+    "@rollup/plugin-typescript": "^8.2.3",
+    "@types/minimist": "^1.2.2",
+    "@vitejs/plugin-vue": "^1.2.5",
+    "@vue/compiler-sfc": "^3.0.5",
+    "electron": "^13.1.7",
+    "electron-chromedriver": "^13.0.0",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.2",
+    "vite": "^2.4.3",
+    "vue-tsc": "^0.0.24"
+  },
+  "keywords": [
+    "vite",
+    "electron",
+    "vue3",
+    "rollup"
+  ]
+}
